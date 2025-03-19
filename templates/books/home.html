@@ -1,0 +1,40 @@
+{% extends 'books/base.html' %}
+
+{% block title %}Home page{% endblock %}
+
+{% block content %}
+    <h2>Filter by category</h2>
+    <form method="get" class="mb-3">
+        <select name="category" class="form-select w-50" onchange="this.form.submit()">
+            <option value="">All categories</option>
+            {% for category in categories %}
+                <option value="{{ category.id }}" {% if selected_category == category.id %}selected{% endif %}>
+                    {{ category.name }}
+                </option>
+            {% endfor %}
+        </select>
+    </form>
+
+    <h2 class="mt-4">Books</h2>
+    <div class="list-group">
+        {% for book in books %}
+            <a href="{% url 'book_detail' book.id %}" class="list-group-item list-group-item-action">
+                <h5 class="mb-1">{{ book.title }}</h5>
+                <p class="text-muted mb-1">Author: {{ book.author }}</p>
+                <small>{{ book.short_description }}</small><br>
+                <span class="text-warning">
+                    {% if book.average_rating > 0 %}
+                        {% for _ in "x"|rjust:book.average_rating %}
+                            <i class="bi bi-star-fill"></i>
+                        {% endfor %}
+                        ({{ book.average_rating }}/5)
+                    {% else %}
+                        No rate
+                    {% endif %}
+                </span>
+            </a>
+        {% empty %}
+            <p class="text-muted">No books in this category.</p>
+        {% endfor %}
+    </div>
+{% endblock %}
