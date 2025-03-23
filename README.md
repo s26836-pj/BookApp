@@ -1,6 +1,10 @@
 admin:
-	login:admin
+	
+ 
+ 	login:admin
 	haslo:admin
 
-user:	login:user
-	    haslo: useruseruser
+user:	
+
+	login:user
+	haslo: useruseruser
