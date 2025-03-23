@@ -1,0 +1,848 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 1,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 1,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 1,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 1,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 2,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 2,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 2,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 2,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 3,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 3,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 3,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 3,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add category",
+    "content_type": 6,
+    "codename": "add_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change category",
+    "content_type": 6,
+    "codename": "change_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete category",
+    "content_type": 6,
+    "codename": "delete_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view category",
+    "content_type": 6,
+    "codename": "view_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add book",
+    "content_type": 7,
+    "codename": "add_book"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change book",
+    "content_type": 7,
+    "codename": "change_book"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete book",
+    "content_type": 7,
+    "codename": "delete_book"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view book",
+    "content_type": 7,
+    "codename": "view_book"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add review",
+    "content_type": 8,
+    "codename": "add_review"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change review",
+    "content_type": 8,
+    "codename": "change_review"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete review",
+    "content_type": 8,
+    "codename": "delete_review"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view review",
+    "content_type": 8,
+    "codename": "view_review"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$cy3ebgcXukcEN9rk1J01DO$XU9FWP8oBX1efnAgCY+XT+oQsPHBkeBRJKMMIdFWqRI=",
+    "last_login": "2025-03-23T19:58:52.742Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-03-21T13:02:55.360Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$DuFazepx0p2sFCfFz7PKHG$DkgEqNBh3s/+5W2wAKRuN13Sp8QV1jO4naXnzQi6xqU=",
+    "last_login": "2025-03-23T19:58:39.486Z",
+    "is_superuser": false,
+    "username": "user",
+    "first_name": "",
+    "last_name": "",
+    "email": "user@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-21T14:00:04.607Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$jo5yLkPx8nlfBqBQAihMZT$8qGlhEfMASVdJAMlh/Q7wKN4m50RDGVagcBcAPnhUwg=",
+    "last_login": "2025-03-21T14:04:39.297Z",
+    "is_superuser": false,
+    "username": "test",
+    "first_name": "",
+    "last_name": "",
+    "email": "test@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-21T14:04:38.899Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$D2xQKHadM8AJ1eSHLKAg1V$IREcwc6kl6XEW2OmauU0bT6ItZtMzt4rdFU48tYNxdw=",
+    "last_login": "2025-03-22T22:59:40.146Z",
+    "is_superuser": false,
+    "username": "test1",
+    "first_name": "",
+    "last_name": "",
+    "email": "test1@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-22T22:59:39.758Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$izF4HLJXyukCLmHvYibPri$SNcCjJ3tnx0tfnhPgNkjI4vYIvVridS4J4SHtCN5B+s=",
+    "last_login": "2025-03-23T19:48:37.893Z",
+    "is_superuser": false,
+    "username": "h8ter",
+    "first_name": "",
+    "last_name": "",
+    "email": "h8ter@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-03-23T19:43:02.835Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "books",
+    "model": "category"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "books",
+    "model": "book"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "books",
+    "model": "review"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "1l8e0lgugtdzaz6pu974m72qjoj1tjbq",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHg8Cgu3fcbyDAMUjU0Ke3K-O_apAvd3nPOfYmI21rj1nmJUxYXocXpd0tID247yHdst1nS3NZlSnJX5EG7HOfMz-vh_h1U7PVbMySbCLRmzWrwCCVbFywDDGgoUHHKgSHFYHTxjpSy2QcdkvXlbAjE-wPgxDdw:1tw50y:5G0FZRnj47X0o1YeFGHvtE-fIaBOp860Gn1AjFhUSQ8",
+    "expire_date": "2025-04-05T20:00:16.546Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "7vkgmcr3owqv58rq6ltoge5hjp3b7aew",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHg8Cgu3fcbyDAMUjU0Ke3K-O_apAvd3nPOfYmI21rj1nmJUxYXocXpd0tID247yHdst1nS3NZlSnJX5EG7HOfMz-vh_h1U7PVbMySbCLRmzWrwCCVbFywDDGgoUHHKgSHFYHTxjpSy2QcdkvXlbAjE-wPgxDdw:1twMJ5:gOg3l4K4nVzbMZMYOQP7pj53x8JMdzXmQ5p0MftpONU",
+    "expire_date": "2025-04-06T14:28:07.400Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "mr038lhde55a26ffpdv39puk6ud96q2j",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHg8Cgu3fcbyDAMUjU0Ke3K-O_apAvd3nPOfYmI21rj1nmJUxYXocXpd0tID247yHdst1nS3NZlSnJX5EG7HOfMz-vh_h1U7PVbMySbCLRmzWrwCCVbFywDDGgoUHHKgSHFYHTxjpSy2QcdkvXlbAjE-wPgxDdw:1twNH1:6qF3mielAdeYlPlR4BuboTLD5FWb-beFgN6Y5czSlS4",
+    "expire_date": "2025-04-06T15:30:03.635Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "nwri3tcozcjwvu0xk8un9ojpp5oizhri",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHg8Cgu3fcbyDAMUjU0Ke3K-O_apAvd3nPOfYmI21rj1nmJUxYXocXpd0tID247yHdst1nS3NZlSnJX5EG7HOfMz-vh_h1U7PVbMySbCLRmzWrwCCVbFywDDGgoUHHKgSHFYHTxjpSy2QcdkvXlbAjE-wPgxDdw:1tvfZB:LtkeeqtnVq8wAww21qtdbXLPR71tL4kB2dP93XH0n_U",
+    "expire_date": "2025-04-04T16:49:53.401Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "uwitsc9u9vwiezyxhrl0v61pevwed5mr",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHg8Cgu3fcbyDAMUjU0Ke3K-O_apAvd3nPOfYmI21rj1nmJUxYXocXpd0tID247yHdst1nS3NZlSnJX5EG7HOfMz-vh_h1U7PVbMySbCLRmzWrwCCVbFywDDGgoUHHKgSHFYHTxjpSy2QcdkvXlbAjE-wPgxDdw:1twRTA:2nib3zMd9Eyws5zHA6lpDLme4l8UsVrw97EZ43BkfdQ",
+    "expire_date": "2025-04-06T19:58:52.746Z"
+  }
+},
+{
+  "model": "books.category",
+  "pk": 36,
+  "fields": {
+    "name": "Epic Fantasy"
+  }
+},
+{
+  "model": "books.category",
+  "pk": 37,
+  "fields": {
+    "name": "Fantasy"
+  }
+},
+{
+  "model": "books.category",
+  "pk": 39,
+  "fields": {
+    "name": "Science Fiction"
+  }
+},
+{
+  "model": "books.category",
+  "pk": 40,
+  "fields": {
+    "name": "Classic"
+  }
+},
+{
+  "model": "books.category",
+  "pk": 41,
+  "fields": {
+    "name": "Dystopian"
+  }
+},
+{
+  "model": "books.category",
+  "pk": 43,
+  "fields": {
+    "name": "Fiction"
+  }
+},
+{
+  "model": "books.category",
+  "pk": 44,
+  "fields": {
+    "name": "Tragedy"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 60,
+  "fields": {
+    "title": "The Two Towers",
+    "author": "J.R.R. Tolkien",
+    "description": "The Fellowship is broken, and the war for Middle-earth begins as Frodo continues his quest.",
+    "category": 36,
+    "cover_url": "/media/covers/book_60.jpg",
+    "isbn": null,
+    "updated_at": "2025-03-23T19:11:22.830Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 65,
+  "fields": {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "description": "Holden Caulfield narrates a story of teenage angst, rebellion, and identity in post-war America.",
+    "category": 40,
+    "cover_url": "/media/covers/book_65.jpg",
+    "isbn": null,
+    "updated_at": "2025-03-23T19:11:28.401Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 67,
+  "fields": {
+    "title": "1984",
+    "author": "George Orwell",
+    "description": "In a totalitarian future, Winston Smith dares to rebel against a government that watches everything.",
+    "category": 41,
+    "cover_url": "/media/covers/book_67.jpg",
+    "isbn": null,
+    "updated_at": "2025-03-23T19:12:08.280Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 74,
+  "fields": {
+    "title": "The Fellowship of the Ring",
+    "author": "J.R.R. Tolkien",
+    "description": "The Fellowship of the Ring is the first of three volumes of the epic novel The Lord of the Rings by the English author J. R. R. Tolkien; it is followed by The Two Towers and The Return of the King. The action takes place in the fictional universe of Middle-earth.",
+    "category": 36,
+    "cover_url": "/media/covers/book_74.jpg",
+    "isbn": null,
+    "updated_at": "2025-03-23T19:12:12.200Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 76,
+  "fields": {
+    "title": "A Game of Thrones",
+    "author": "George R.R. Martin",
+    "description": "A Game of Thrones is the first novel in A Song of Ice and Fire, a series of fantasy novels by American author George R. R. Martin. It was first published on August 1, 1996.",
+    "category": 36,
+    "cover_url": "/media/covers/book_76.jpg",
+    "isbn": null,
+    "updated_at": "2025-03-23T19:12:17.506Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 77,
+  "fields": {
+    "title": "Expert Internet Searching",
+    "author": "Phil Bradley",
+    "description": "In an environment where increasing amounts of information (and fake news) flood the internet on websites and social media, the information professional├óÔéČÔäós job is getting harder. It is important that they are skilled at finding and using the appropriate information and assisting users in working out what information they need and the best way of getting it. Expert Internet Searching provides library and information professionals with in-depth practical information on how to search the internet quickly and effectively to help their users and make their lives easier. Now fully revised for its fifth edition, this book covers the basics of search before going into detail on how to run advanced and complex searches using a variety of different search engines. This edition has been updated to include current trends in search, such as social media search, fake news, and discussion of the authority and validity of search results. It will ensure that information professionals, whether complete beginners or more experienced, are able to work efficiently to obtain accurate information in a timely fashion. Key topics covered include: an introduction to the internet and search enginesthe Google experience and a discussion of its disadvantagesdirectory, clustering and similarity search enginesvisual and image search enginesspecialized search engines incorporating academic search and services for childrenacademic and other specialized search enginesnews-based search engines including traditional media resources and a discussion of fake newssocial media search engineshints and tips on better searching. This book will be useful reading for any information professional who is seeking to gain an in-depth understanding of the search process and the search industry. It provides a vital guide to the basics in search, but will also help experienced professionals stay up to date with the latest trends and information in the industry.",
+    "category": 37,
+    "cover_url": "/media/covers/book_77.jpg",
+    "isbn": null,
+    "updated_at": "2025-03-23T19:30:53.322Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 78,
+  "fields": {
+    "title": "The Return of the King",
+    "author": "J.R.R. Tolkien",
+    "description": "As the final battle looms, Aragorn claims his destiny, and Frodo nears the heart of darkness.",
+    "category": 36,
+    "cover_url": "/media/covers/book_78.jpg",
+    "isbn": null,
+    "updated_at": "2025-03-23T19:54:28.524Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 79,
+  "fields": {
+    "title": "Harry Potter and the Philosopher's Stone",
+    "author": "J.K. Rowling",
+    "description": "A young boy discovers he is a wizard and begins his magical journey at Hogwarts.",
+    "category": 37,
+    "cover_url": "/media/covers/book_79.jpg",
+    "isbn": null,
+    "updated_at": "2025-03-23T19:30:56.913Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 80,
+  "fields": {
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "description": "On the desert planet Arrakis, Paul Atreides becomes the key to a galactic power struggle.",
+    "category": 39,
+    "cover_url": "/media/covers/book_80.jpg",
+    "isbn": null,
+    "updated_at": "2025-03-23T19:30:58.224Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 81,
+  "fields": {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "description": "A timeless novel of racial injustice, childhood innocence, and moral growth in the Deep South.",
+    "category": 40,
+    "cover_url": "/media/covers/book_81.jpg",
+    "isbn": null,
+    "updated_at": "2025-03-23T19:30:59.742Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 82,
+  "fields": {
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "description": "A futuristic society driven by technology and control where individuality is nearly extinct.",
+    "category": 41,
+    "cover_url": "/media/covers/book_82.jpg",
+    "isbn": null,
+    "updated_at": "2025-03-23T19:31:01.027Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 83,
+  "fields": {
+    "title": "The Name of the Wind",
+    "author": "Patrick Rothfuss",
+    "description": "Kvothe recounts his epic tale of magic, music, and tragedy in a richly built fantasy world.",
+    "category": 37,
+    "cover_url": "/media/covers/book_83.jpg",
+    "isbn": null,
+    "updated_at": "2025-03-23T19:31:02.479Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 84,
+  "fields": {
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "description": "The story of Rodion Raskolnikov, a young man who commits a murder and struggles with guilt, morality, and redemption in 19th-century Russia",
+    "category": 40,
+    "cover_url": "/media/covers/book_84.jpg",
+    "isbn": null,
+    "updated_at": "2025-03-23T19:31:03.469Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 86,
+  "fields": {
+    "title": "Romeo and Juliet",
+    "author": "William Shakespeare",
+    "description": "Romeo and Juliet is one of William Shakespeare├óÔéČÔäós most famous tragedies. It tells the story of two young lovers from feuding families in Verona, Italy. Despite their families├óÔéČÔäó hatred, Romeo Montague and Juliet Capulet fall deeply in love and secretly marry. Their love leads to a series of tragic events, ending in heartbreak and death. The play explores themes such as love, fate, family conflict, and the impulsiveness of youth. It remains a timeless tale about the power of love and the consequences of hatred.",
+    "category": 44,
+    "cover_url": "/media/covers/book_86.jpg",
+    "isbn": null,
+    "updated_at": "2025-03-23T19:31:04.394Z"
+  }
+},
+{
+  "model": "books.book",
+  "pk": 90,
+  "fields": {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "description": "The Hobbit is set in Middle-earth and follows home-loving Bilbo Baggins, the titular hobbit who joins the wizard Gandalf and the thirteen dwarves of Thorin's Company on a quest to reclaim the dwarves' home and treasure from the dragon Smaug. Bilbo's journey takes him from his peaceful rural surroundings into more sinister territory.",
+    "category": 36,
+    "cover_url": "/media/covers/book_90.jpg",
+    "isbn": "9780261103344",
+    "updated_at": "2025-03-23T19:31:07.206Z"
+  }
+},
+{
+  "model": "books.review",
+  "pk": 89,
+  "fields": {
+    "book": 60,
+    "user": 1,
+    "content": "Great book, I recommend it",
+    "rating": 5
+  }
+},
+{
+  "model": "books.review",
+  "pk": 90,
+  "fields": {
+    "book": 65,
+    "user": 1,
+    "content": "Great book, I recommend it",
+    "rating": 5
+  }
+},
+{
+  "model": "books.review",
+  "pk": 91,
+  "fields": {
+    "book": 67,
+    "user": 1,
+    "content": "Great book, I recommend it",
+    "rating": 5
+  }
+},
+{
+  "model": "books.review",
+  "pk": 92,
+  "fields": {
+    "book": 74,
+    "user": 1,
+    "content": "Great book, I recommend it",
+    "rating": 5
+  }
+},
+{
+  "model": "books.review",
+  "pk": 93,
+  "fields": {
+    "book": 76,
+    "user": 1,
+    "content": "Great book, I recommend it",
+    "rating": 4
+  }
+},
+{
+  "model": "books.review",
+  "pk": 94,
+  "fields": {
+    "book": 90,
+    "user": 1,
+    "content": "Great book, I recommend it",
+    "rating": 5
+  }
+},
+{
+  "model": "books.review",
+  "pk": 95,
+  "fields": {
+    "book": 60,
+    "user": 5,
+    "content": "I do not recommend it, it's a bad book",
+    "rating": 1
+  }
+},
+{
+  "model": "books.review",
+  "pk": 96,
+  "fields": {
+    "book": 74,
+    "user": 5,
+    "content": "I do not recommend it, it's a bad book",
+    "rating": 1
+  }
+},
+{
+  "model": "books.review",
+  "pk": 97,
+  "fields": {
+    "book": 65,
+    "user": 5,
+    "content": "I do not recommend it, it's a bad book",
+    "rating": 2
+  }
+},
+{
+  "model": "books.review",
+  "pk": 98,
+  "fields": {
+    "book": 76,
+    "user": 5,
+    "content": "I do not recommend it, it's a bad book",
+    "rating": 4
+  }
+},
+{
+  "model": "books.review",
+  "pk": 100,
+  "fields": {
+    "book": 77,
+    "user": 5,
+    "content": "I do not recommend it, it's a bad book",
+    "rating": 2
+  }
+},
+{
+  "model": "books.review",
+  "pk": 101,
+  "fields": {
+    "book": 78,
+    "user": 5,
+    "content": "I do not recommend it, it's a bad book",
+    "rating": 3
+  }
+}
+]

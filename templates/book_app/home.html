@@ -1,0 +1,36 @@
+{% extends 'book_app/base.html' %}
+
+{% block title %}Home page{% endblock %}
+{% load static %}
+
+{% block content %}
+    <h2>Filter</h2>
+    <form id="filter-form" method="get" class="mb-3">
+        <div class="d-flex flex-wrap gap-3 align-items-center">
+
+            <select name="category" id="category-filter" class="form-select w-auto">
+                <option value="">All categories</option>
+                {% for category in categories %}
+                    <option value="{{ category.id }}" {% if selected_category == category.id %}selected{% endif %}>
+                        {{ category.name }}
+                    </option>
+                {% endfor %}
+            </select>
+
+            <input type="text" name="q" placeholder="Search title..." value="{{ request.GET.q }}"
+                   class="form-control w-auto" style="min-width: 200px;">
+
+            <button type="submit" class="btn btn-primary">Search</button>
+            <a href="{% url 'home' %}" class="btn btn-outline-danger">Clear filters</a>
+        </div>
+    </form>
+
+    <div id="book-container">
+        {% include "book_app/book_list.html" %}
+    </div>
+
+    <script src="{% static 'js/review_ajax.js' %}"></script>
+    <script src="{% static 'js/filter.js' %}"></script>
+    <script src="{% static 'js/review_utils.js' %}"></script>
+    <script src="{% static 'js/review_refresh.js' %}"></script>
+{% endblock %}

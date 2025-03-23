@@ -1,0 +1,162 @@
+{% extends 'book_app/base.html' %}
+
+{% block title %}{{ book.title }}{% endblock %}
+{% load static %}
+
+{% block content %}
+    <div class="container mt-5">
+        {% if user.is_superuser %}
+            <a href="{% url 'fetch_cover_for_book' book.id %}" class="btn btn-outline-info mb-3">
+                <i class="bi bi-cloud-download"></i> Fetch Cover
+            </a>
+        {% endif %}
+        <div class="card shadow-lg p-4">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="mb-3">{{ book.title }}</h1>
+                    <p><strong>Author:</strong> {{ book.author }}</p>
+                    <p><strong>Category:</strong> {{ book.category.name }}</p>
+                    <p><strong>Description:</strong> {{ book.description }}</p>
+
+                    <h4>Average rating:</h4>
+                    <div class="d-flex align-items-center text-warning fs-5" id="avg-rating">
+                        {% if book.get_average_rating > 0 %}
+                            {% for _ in "x"|rjust:book.get_average_rating %}
+                                <i class="bi bi-star-fill me-1"></i>
+                            {% endfor %}
+                            <span class="ms-2 fs-6 text-dark">({{ book.get_average_rating|floatformat:1 }}/5)</span>
+                        {% else %}
+                            <span class="fs-6 text-muted">No rating yet</span>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="col-md-4 d-flex justify-content-end align-items-start">
+                    {% if book.cover_url %}
+                        <img src="{{ book.cover_url }}"
+                             alt="{{ book.title }} cover"
+                             class="img-fluid shadow-lg"
+                             style="height: 360px; width: auto; object-fit: cover; border-radius: 12px;">
+                    {% else %}
+                        <img src="https://via.placeholder.com/150x225?text=No+Cover"
+                             alt="No cover"
+                             class="img-fluid shadow-lg"
+                             style="height: 360px; width: auto; object-fit: cover; border-radius: 12px;">
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-lg mt-4 p-4">
+            <h3 class="mb-3">Reviews</h3>
+            <div id="review-list">
+                {% for review in reviews %}
+                    <div class="border-bottom mb-3 pb-2" id="review-{{ review.id }}">
+                        <p><strong>{{ review.user.username }}</strong></p>
+                        <p>{{ review.content|default:"<span class='text-muted'>No comment provided.</span>"|safe }}</p>
+                        <div class="d-flex align-items-center text-warning fs-5">
+                            {% for _ in "x"|rjust:review.rating %}
+                                <i class="bi bi-star-fill me-1"></i>
+                            {% endfor %}
+                            {% if review.rating > 0 %}
+                                <span class="ms-2 fs-6 text-dark">({{ review.rating }}.0/5)</span>
+                            {% endif %}
+                        </div>
+
+                        {% if user.is_superuser %}
+                            <button class="btn btn-sm btn-outline-danger delete-review-btn"
+                                    data-review-id="{{ review.id }}"
+                                    data-csrf-token="{{ csrf_token }}">
+                                Delete
+                            </button>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="modal fade" id="deleteReviewModal" tabindex="-1" aria-labelledby="deleteReviewModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="deleteReviewModalLabel">Confirm review deletion</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to delete this review?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-danger" id="confirmDeleteReview">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-lg mt-4 p-4">
+            <h4 class="mb-3">Add Review</h4>
+            {% if user.is_authenticated %}
+                <form id="review-form" method="post" data-url="{% url 'create_review' book.id %}">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="review-content" class="form-label">Your Review</label>
+                        <textarea id="review-content" name="content" class="form-control" rows="4"
+                                  placeholder="Write your review here..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Rating</label>
+                        <div id="rating-stars" class="d-flex align-items-center  fs-4 text-warning">
+                            <i class="bi bi-star me-1" data-value="1"></i>
+                            <i class="bi bi-star me-1" data-value="2"></i>
+                            <i class="bi bi-star me-1" data-value="3"></i>
+                            <i class="bi bi-star me-1" data-value="4"></i>
+                            <i class="bi bi-star me-1" data-value="5"></i>
+                        </div>
+                        <input type="hidden" id="review-rating" name="rating" value="0">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Review</button>
+                </form>
+                <div id="review-error" class="alert alert-danger mt-3 d-none" role="alert"></div>
+            {% else %}
+                <p class="text-muted"><a href="{% url 'login' %}">Log in</a> to add a review.</p>
+            {% endif %}
+        </div>
+
+        <nav>
+            <ul class="pagination justify-content-center mt-3">
+                {% if reviews.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page=1">First</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ reviews.previous_page_number }}">Previous</a>
+                    </li>
+                {% endif %}
+
+                <li class="page-item disabled">
+                    <span class="page-link">Page {{ reviews.number }} of {{ reviews.paginator.num_pages }}</span>
+                </li>
+
+                {% if reviews.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ reviews.next_page_number }}">Next</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ reviews.paginator.num_pages }}">Last</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+        <a href="{% url 'home' %}" class="btn btn-danger mt-3">Return</a>
+    </div>
+    <script src="{% static 'js/review_ajax.js' %}"></script>
+    <script src="{% static 'js/review_stars.js' %}"></script>
+    <script src="{% static 'js/review_delete.js' %}"></script>
+    <script src="{% static 'js/review_utils.js' %}"></script>
+    <script>
+    const USER_IS_ADMIN = {{ user.is_superuser|yesno:"true,false" }};
+</script>
+{% endblock %}

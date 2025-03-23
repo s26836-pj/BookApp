@@ -1,0 +1,88 @@
+{% extends 'book_app/base.html' %}
+{% load static %}
+
+{% block title %}Create Account{% endblock %}
+
+{% block content %}
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card shadow-lg p-5" style="max-width: 400px; width: 100%; border-radius: 15px;">
+            <h2 class="text-center mb-4">Create Account</h2>
+
+            <form method="post" class="needs-validation" id="register-form">
+                {% csrf_token %}
+
+                <div class="mb-3">
+                    <label class="form-label">Username:</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-person"></i></span>
+                        {{ form.username }}
+                    </div>
+                    {% if form.username.errors %}
+                        <div class="text-danger small">
+                            {% for error in form.username.errors %}
+                                {{ error }}<br>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Email:</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                        {{ form.email }}
+                    </div>
+                    {% if form.email.errors %}
+                        <div class="text-danger small">
+                            {% for error in form.email.errors %}
+                                {{ error }}<br>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Password:</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                        {{ form.password1 }}
+                    </div>
+                    <small class="form-text text-muted">
+                        - Minimum 8 characters.<br>
+
+                    </small>
+                    {% if form.password1.errors %}
+                        <div class="text-danger small">
+                            {% for error in form.password1.errors %}
+                                {{ error }}<br>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Confirm Password:</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                        {{ form.password2 }}
+                    </div>
+                    {% if form.password2.errors %}
+                        <div class="text-danger small">
+                            {% for error in form.password2.errors %}
+                                {{ error }}<br>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    <div id="password-error" class="text-danger small mt-1" style="display: none;">
+                        Passwords do not match!
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 mb-2">Create Account</button>
+            </form>
+
+            <a href="{% url 'home' %}" class="btn btn-outline-secondary w-100">Return</a>
+        </div>
+    </div>
+ <script src="{% static 'js/register.js' %}"></script>
+{% endblock %}
